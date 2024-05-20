@@ -24,9 +24,10 @@ class HospitalPatient(models.Model):
     
     # This defines a selection field for the patient's gender, with options for 'male', 'female', and 'other'
     # The field is required and has a default value of 'male'
-    gender = fields.Selection([
-        ('male', 'Male'),
-        ('female', 'Female'),
-        ('other', 'Other'),
-    ], String="gender", required=True, default='male')
+    _description = "Patient Records"
+    name = fields.Char(string='Name', required=True)
+    age = fields.Integer(string='Age')
+    is_child = fields.Boolean(string="Is Child?", default=False)
+    notes = fields.Text(string="Notes")
+    gender = fields.Selection([('male', 'Male'), ('female', 'Female'), ('other', 'Other')], string="Gender", required=True, default='male')
     

@@ -5,11 +5,11 @@ from odoo import api, fields, models
 
 # This is a class that defines the model for hospital patients
 class HospitalPatient(models.Model):
-
+    # This sets the name of the model to "hospital.patient"
     _name = "hospital.patient"
     # This sets the description of the model to "Patient Records"
     _description = "Patient Records"
-
+    
     # This defines a required character field for the patient's name
     name = fields.Char(string='Name', required=True)
     

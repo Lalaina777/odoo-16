@@ -7,7 +7,7 @@
     'description': """Hospital Management software 2024.""",
     'category': 'Productivity',
     'website': 'https://github.com/Lalaina777',
-    'depends' : [],
+    'depends' : ['mail'],
     'data': [
         'security/ir.model.access.csv',
         'views/menu.xml',
